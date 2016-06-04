@@ -1,0 +1,19 @@
+{
+  "name": "id3writer",
+  "version": "1.0.0",
+  "description": ":cd: id3Writer :notes: =================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GBouffard/id3Writer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GBouffard/id3Writer/issues"
+  },
+  "homepage": "https://github.com/GBouffard/id3Writer#readme"
+}
