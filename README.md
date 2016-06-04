@@ -26,5 +26,5 @@ How to run it
 git clone git@github.com:GBouffard/id3Writer.git
 cd id3Writer
 npm install
-npm make-id3
+npm write-id3
 ```
