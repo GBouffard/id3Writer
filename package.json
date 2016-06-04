@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/GBouffard/id3Writer/issues"
   },
-  "homepage": "https://github.com/GBouffard/id3Writer#readme"
+  "homepage": "https://github.com/GBouffard/id3Writer#readme",
+  "dependencies": {
+    "fs": "0.0.2",
+    "get-json": "0.0.3",
+    "node-id3": "0.0.4",
+    "recursive-readdir-synchronous": "0.0.3",
+    "request": "^2.72.0"
+  }
 }
