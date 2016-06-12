@@ -13,7 +13,7 @@ var download = function(uri, filename){
   });
 };
 
-for (var i = 1; i < files.length; i++) {
+for (var i = 0; i < files.length; i++) {
   (function(index) {
     var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
     var artist = artistTitleArray[0];
