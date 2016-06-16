@@ -21,9 +21,9 @@ for (var i = 0; i < files.length; i++) {
 
     var spotifyAPI = (
       "https://api.spotify.com/v1/search?q=artist:"
-      + artist.replace(/ /g, "%20")
+      + artist.replace(/ /g, "%20").replace(/'/g, "%27")
       + "%20track:"
-      + title.replace(/ /g, "%20")
+      + title.replace(/ /g, "%20").replace(/'/g, "%27")
       + "&type=track"
     );
 
