@@ -22,9 +22,17 @@ Node Packages:
 
 How to run it
 ----
+
 ```
 git clone git@github.com:GBouffard/id3Writer.git
 cd id3Writer
 npm install
-npm write-id3
+```
+
+files go in Files folder as "artist - title"
+or as "Movie title"
+
+```
+npm run write-id3 (music)
+npm run getMoviePoster
 ```
