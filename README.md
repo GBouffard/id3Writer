@@ -3,10 +3,6 @@
 
 Personal project made in Javascript to write i3d tags.
 
-Objectives of exercise
-----
-To learn about Javascript, Jasmine and jQuery.
-
 Technologies used
 ----
 - Javascript
