@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "write-id3": "node id3Writer.js",
-    "getMoviePoster": "node moviePosters.js"
+    "1": "node downloadCover.js",
+    "2": "node writeId3.js",
+    "movies": "node moviePosters.js"
   },
   "repository": {
     "type": "git",
