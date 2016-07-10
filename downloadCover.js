@@ -17,7 +17,7 @@ for (var i = 0; i < files.length; i++) {
     var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
     var artist = artistTitleArray[0];
     var title = artistTitleArray[1];
-    var mp3 = artist +' - ' + title;
+    var mp3 = artist + " - " + title;
 
     var spotifyAPI = (
       "https://api.spotify.com/v1/search?q=artist:"
@@ -27,11 +27,15 @@ for (var i = 0; i < files.length; i++) {
       + "&type=track"
     );
 
-    // need to deal with coverUrl cannot be found || null
     setTimeout(function() {
       getJSON(spotifyAPI, function(err, response) {
-        var coverUrl = response.tracks.items[0].album.images[0].url;
-        download(coverUrl, "./Temp/" + mp3 + ".jpeg");
+        var coverUrl;
+        if (response.tracks.items[0]) {
+          coverUrl = response.tracks.items[0].album.images[0].url;
+          download(coverUrl, "./Temp/" + mp3 + ".jpg");
+        } else {
+          console.log("no cover for: " + mp3);
+        }
       });
 
     }, i * 5000);
