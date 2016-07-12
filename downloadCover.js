@@ -14,6 +14,9 @@ var download = function(uri, filename){
 
 for (var i = 0; i < files.length; i++) {
   (function(index) {
+    if (!files[i].slice(6).includes(" - ")) {
+      console.log(files[i].slice(6));
+    }
     var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
     var artist = artistTitleArray[0];
     var title = artistTitleArray[1];
@@ -21,9 +24,9 @@ for (var i = 0; i < files.length; i++) {
 
     var spotifyAPI = (
       "https://api.spotify.com/v1/search?q=artist:"
-      + artist.replace(/ /g, "%20").replace(/'/g, "%27")
+      + artist.replace(/ /g, "%20").replace(/'/g, "%27").replace(/!/g, "%21")
       + "%20track:"
-      + title.replace(/ /g, "%20").replace(/'/g, "%27")
+      + title.replace(/ /g, "%20").replace(/'/g, "%27").replace(/!/g, "%21")
       + "&type=track"
     );
 
