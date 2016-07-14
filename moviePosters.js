@@ -3,7 +3,7 @@ var fs = require("fs");
 var request = require("request");
 var getJSON = require("get-json");
 
-var files = recursive("./Files", [".DS_Store"]);
+var files = recursive("./Movies", [".DS_Store"]);
 
 var download = function(uri, filename){
   "use strict";
@@ -24,7 +24,7 @@ for (var i = 0; i < files.length; i++) {
     setTimeout(function() {
       getJSON(imdbAPI, function(err, response) {
         var coverUrl = response.Poster;
-        download(coverUrl, "./Files/" + movieTitle + ".jpeg");
+        download(coverUrl, "./Movies/" + movieTitle + ".jpeg");
       });
     }, i * 4000);
   })(i);
