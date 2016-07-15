@@ -25,10 +25,16 @@ cd id3Writer
 npm install
 ```
 
-files go in Files folder as "artist - title"
-or as "Movie title"
+Music Files folder: "artist - title"
 
 ```
-npm run write-id3 (music)
-npm run getMoviePoster
+npm run 1
+npm run 2
+```
+----
+
+Music Files folder: "Movie title"
+
+```
+npm run movies
 ```
