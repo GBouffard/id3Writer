@@ -17,10 +17,25 @@ for (var i = 0; i < files.length; i++) {
     if (!files[i].slice(6).includes(" - ")) {
       console.log(files[i].slice(6));
     }
+
     var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
-    var artist = artistTitleArray[0];
+    var artist = artist = artistTitleArray[0];
+    if (artist.includes(" feat")) {
+      artist = artist.split(" feat")[0];
+    }
+
     var title = artistTitleArray[1];
-    var mp3 = artist + " - " + title;
+    if (title.includes("(acoustic)")) {
+      title = title.split(" (acoustic)")[0];
+    } else if (title.includes("(live)")) {
+      title = title.split(" (live)")[0];
+    } else if (title.includes("(unplugged)")) {
+      title = title.split(" (unplugged)")[0];
+    } else if (title.includes("cover)")) {
+      title = title.split(" (")[0];
+    }
+
+    var mp3 = artistTitleArray[0] + " - " + artistTitleArray[1];
 
     var spotifyAPI = (
       "https://api.spotify.com/v1/search?q=artist:"
