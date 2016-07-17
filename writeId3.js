@@ -7,10 +7,9 @@ for (var i = 0; i < files.length; i++) {
   var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
   var artist = artistTitleArray[0];
   var title = artistTitleArray[1];
-  var mp3 = artist +' - ' + title;
+  var mp3 = artist + " - " + title;
 
-  // need to deal with coverImage doesn't exist
-  var coverImage = "./Temp/" + mp3 + ".jpeg";
+  var coverImage = "./Temp/" + mp3 + ".jpg";
   var tags = {
     artist: artist,
     title: title,
