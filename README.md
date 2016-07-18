@@ -6,7 +6,7 @@ Personal project made in Javascript to write i3d tags.
 Technologies used
 ----
 - Javascript
-- Ndde
+- Node
 - Spotify API
 
 Node Packages:
