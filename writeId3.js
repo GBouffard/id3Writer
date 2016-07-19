@@ -9,6 +9,7 @@ for (var i = 0; i < files.length; i++) {
   var title = artistTitleArray[1];
   var mp3 = artist + " - " + title;
 
+  // handle other images formats
   var coverImage = "./Temp/" + mp3 + ".jpg";
   var tags = {
     artist: artist,
