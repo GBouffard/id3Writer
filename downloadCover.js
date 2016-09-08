@@ -1,7 +1,6 @@
 var recursive = require("recursive-readdir-synchronous");
 var fs = require("fs");
 var request = require("request");
-var getJSON = require("get-json");
 
 var files = recursive("./Files", [".DS_Store"]);
 
@@ -35,27 +34,8 @@ for (var i = 0; i < files.length; i++) {
       title = title.split(" (")[0];
     }
 
+    var imageLink = "http://www.thulium69.com/wp-content/uploads/2014/02/AlbumCover.png";
     var mp3 = artistTitleArray[0] + " - " + artistTitleArray[1];
-
-    var spotifyAPI = (
-      "https://api.spotify.com/v1/search?q=artist:"
-      + artist.replace(/ /g, "%20").replace(/'/g, "%27").replace(/!/g, "%21")
-      + "%20track:"
-      + title.replace(/ /g, "%20").replace(/'/g, "%27").replace(/!/g, "%21")
-      + "&type=track"
-    );
-
-    setTimeout(function() {
-      getJSON(spotifyAPI, function(err, response) {
-        var coverUrl;
-        if (response.tracks.items[0]) {
-          coverUrl = response.tracks.items[0].album.images[0].url;
-          download(coverUrl, "./Temp/" + mp3 + ".jpg");
-        } else {
-          console.log("no cover for: " + mp3);
-        }
-      });
-
-    }, i * 5000);
+    download(imageLink, "./Temp/" + mp3 + ".jpg");
   })(i);
 }
