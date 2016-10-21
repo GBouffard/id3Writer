@@ -28,7 +28,8 @@ npm install
 Music Files folder: "artist - title"
 
 ```
-npm run 1
+npm run 0 (for multiple files)
+npm run 1 (for single file or same artist, with link)
 npm run 2
 ```
 ----
