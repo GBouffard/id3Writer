@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "0": "node autoDownloadCovers.js",
     "1": "node downloadCover.js",
     "2": "node writeId3.js",
     "movies": "node moviePosters.js"
