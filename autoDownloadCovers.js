@@ -19,7 +19,7 @@ for (var i = 0; i < files.length; i++) {
     }
 
     var artistTitleArray = files[i].slice(6).replace(/.mp3/, "").split(" - ");
-    var artist = artist = artistTitleArray[0];
+    var artist = artistTitleArray[0];
     if (artist.includes(" feat")) {
       artist = artist.split(" feat")[0];
     }
