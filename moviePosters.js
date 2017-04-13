@@ -24,7 +24,12 @@ for (var i = 0; i < files.length; i++) {
     setTimeout(function() {
       getJSON(imdbAPI, function(err, response) {
         var coverUrl = response.Poster;
-        download(coverUrl, "./Movies/" + movieTitle + ".jpeg");
+        if (coverUrl) {
+          console.log("cover FOUND for: " + movieTitle);
+          download(coverUrl, "./Movies/" + movieTitle + ".jpeg");
+        } else {
+          console.log("no cover found for: " + movieTitle);
+        }
       });
     }, i * 4000);
   })(i);
