@@ -23,7 +23,7 @@
   "dependencies": {
     "fs": "0.0.2",
     "get-json": "0.0.3",
-    "node-id3": "0.0.4",
+    "node-id3": "0.0.9",
     "recursive-readdir-synchronous": "0.0.3",
     "request": "^2.72.0"
   }
