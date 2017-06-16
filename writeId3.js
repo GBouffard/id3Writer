@@ -11,6 +11,12 @@ for (var i = 0; i < files.length; i++) {
 
   // handle other images formats
   var coverImage = "./Temp/" + mp3 + ".jpg";
+  // if (!coverImage) { coverImage = "./Temp/" + mp3 + ".png"; }
+  // if (!coverImage) { coverImage = "./Temp/" + mp3 + ".gif"; }
+  // if (!coverImage) { coverImage = "./Temp/" + mp3 + ".svg"; }
+  // if (!coverImage) { coverImage = "./Temp/" + mp3 + ".jpeg"; }
+  // https://www.kirupa.com/html5/checking_if_a_file_exists.htm
+
   var tags = {
     artist: artist,
     title: title,
@@ -19,5 +25,5 @@ for (var i = 0; i < files.length; i++) {
     image: coverImage
   };
   var success = nodeID3.write(tags, files[i]);
-  console.log(success? mp3 : "failed: " + mp3);
+  console.log(success ? mp3 : "failed: " + mp3);
 }
