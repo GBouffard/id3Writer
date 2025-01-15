@@ -32,6 +32,11 @@ npm run 0 (for multiple files)
 npm run 1 (for single file or same artist, with link)
 npm run 2
 ```
+
+Thulium
+```
+npm run t
+```
 ----
 
 Music Files folder: "Movie title"
