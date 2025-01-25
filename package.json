@@ -8,7 +8,7 @@
     "0": "node autoDownloadCovers.js",
     "1": "node downloadCover.js",
     "2": "node writeId3.js",
-    "t": "writeId3Thulium.js",
+    "t": "node writeId3Thulium.js",
     "movies": "node moviePosters.js"
   },
   "repository": {
